@@ -15,12 +15,15 @@
 <div class="product-list">
     {% for product in products %}
     <div class="product">
-        <img src="https://sun1-57.userapi.com/s/v1/if2/gz70-h5YDNs90vYCZiNK9PaXJ4JCyHhqgIVdH7pk0SfgXU5HKWOSTsplCrLd-TzgLmlw4XBL7wYCKUQ8Eg9z6H_n.jpg?size=400x400&quality=95&crop=0,0,1384,1384&blur=20,10&ava=1">
+        <img src="{{ product.image_url }}">
         <div>
-            <h2>Я заблюренный</h2>
-            <p>Ну тип крутой мужик на балу ЦИТа</p>
-            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">Купить</button>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
         </div>
-    </div>    
+        <div class="priceSection">
+            <h3>{{ product.price }} ₽</h3>
+            <button>Купить</button>
+        </div>
+    </div>
     {% endfor %}
 </div>
