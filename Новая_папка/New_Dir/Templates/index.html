@@ -13,6 +13,7 @@
 <p></p>
 
 <div class="product-list">
+    {% for product in products %}
     <div class="product">
         <img src="https://sun1-57.userapi.com/s/v1/if2/gz70-h5YDNs90vYCZiNK9PaXJ4JCyHhqgIVdH7pk0SfgXU5HKWOSTsplCrLd-TzgLmlw4XBL7wYCKUQ8Eg9z6H_n.jpg?size=400x400&quality=95&crop=0,0,1384,1384&blur=20,10&ava=1">
         <div>
@@ -21,4 +22,5 @@
             <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';">Купить</button>
         </div>
     </div>    
+    {% endfor %}
 </div>
