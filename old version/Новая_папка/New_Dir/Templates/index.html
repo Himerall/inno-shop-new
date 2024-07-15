@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
+
+<h1 style="font-family: Arial; text-align: center;"><span style="color: darkgreen;">Да</span>Нет</h1>
+
+<div class="top-but", style="text-align: center;">
+    <a href="/">Главная</a>
+    <a href="/sepplies">Товары</a>
+    <a href="/discounts">Акции</a>
+</div>
+
+
+<p></p>
+
+<div class="product-list">
+    {% for product in products %}
+    <div class="product">
+        <img src="{{ product.image_url }}">
+        <div>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+        </div>
+        <div class="priceSection">
+            <h3>{{ product.price }} ₽</h3>
+            <button>Купить</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
